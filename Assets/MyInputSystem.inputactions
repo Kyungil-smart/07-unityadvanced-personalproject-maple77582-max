@@ -1,0 +1,92 @@
+{
+    "version": 1,
+    "name": "MyInputSystem",
+    "maps": [
+        {
+            "name": "RPSGame",
+            "id": "551e5bf2-4f55-4ad8-8373-3053315febf9",
+            "actions": [
+                {
+                    "name": "Rock",
+                    "type": "Button",
+                    "id": "60f6c55c-796f-4798-ab88-417ba1d76d6e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Scissors",
+                    "type": "Button",
+                    "id": "57b5f44a-b7cd-473d-9962-0ff271ecc132",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Paper",
+                    "type": "Button",
+                    "id": "f0856fb3-7f42-4492-a384-eef5b94e9773",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b85698d2-b983-489f-8ba8-18fe606eb204",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keymouse",
+                    "action": "Rock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b6db85ab-b8a1-4774-a315-ada1af6b1338",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keymouse",
+                    "action": "Scissors",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd5eca7a-4604-4354-b273-8e9b632bb97b",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keymouse",
+                    "action": "Paper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "keymouse",
+            "bindingGroup": "keymouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
