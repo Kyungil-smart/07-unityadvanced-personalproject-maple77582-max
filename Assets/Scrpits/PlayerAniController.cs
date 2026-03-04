@@ -11,18 +11,6 @@ public class AniController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.zKey.wasPressedThisFrame)
-        {
-            anim.SetTrigger("HipHop");
-        }
-        if (Keyboard.current.xKey.wasPressedThisFrame)
-        {
-            anim.SetTrigger("Spin");
-        }
-        if (Keyboard.current.cKey.wasPressedThisFrame)
-        {
-            anim.SetTrigger("Ymca");
-        }
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
             anim.SetTrigger("HookPunch");
