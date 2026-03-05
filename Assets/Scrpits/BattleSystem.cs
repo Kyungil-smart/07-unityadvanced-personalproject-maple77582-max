@@ -46,7 +46,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (!context.performed) return;
         if (!canAttack) return;
-
+        Debug.Log("상단 공격!");
         Attack(AttackType.High);
     }
 
@@ -54,6 +54,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (!context.performed) return;
         if (!canAttack) return;
+        Debug.Log("중단 공격!");
         Attack(AttackType.Middle);
     }
 
@@ -61,6 +62,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (!context.performed) return;
         if (!canAttack) return;
+        Debug.Log("하단 공격!");
         Attack(AttackType.Low);
     }
 
@@ -88,7 +90,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (!context.performed) return;
         if (!canDefense) return;
-
+        Debug.Log("상단 방어!");
         Defense(DefenseType.High);
     }
 
@@ -96,7 +98,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (!context.performed) return;
         if (!canDefense) return;
-
+        Debug.Log("중단 방어!");
         Defense(DefenseType.Middle);
     }
 
@@ -104,7 +106,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (!context.performed) return;
         if (!canDefense) return;
-
+        Debug.Log("하단 방어!");
         Defense(DefenseType.Low);
     }
 
@@ -115,11 +117,11 @@ public class BattleSystem : MonoBehaviour
         Debug.Log($"AI Attack : {aiAttack}");
         if ((int)playerDefense == (int)aiAttack)
         {
-            Debug.Log("방어 성공! AI가 공격에 실패했습니다.");//방어에 성공하였기 때문에 포지션 이동 없음
+            Debug.Log("방어 성공! AI가 공격에 실패했습니다.");//플레리어가 방어에 성공하였기 때문에 포지션 이동 없음
         }
         else
         {
-            Debug.Log("방어 실패! AI가 공격에 성공했습니다.");//방어에 실패하였기 때문에 포지션 이동 있음
+            Debug.Log("방어 실패! AI가 공격에 성공했습니다.");//플레이어가 방어에 실패하였기 때문에 포지션 이동 있음
             moveController.AIAttackSuccess();
         }
         canDefense = false; //방어가 끝나면 가위바위보에서 다시 지기 전까지 canDefense를 false로 전환

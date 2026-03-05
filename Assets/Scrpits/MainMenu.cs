@@ -22,4 +22,10 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+    public void OnClickTitle()
+    {
+        Debug.Log("타이틀로 돌아갑니다");
+        SceneManager.LoadScene("Title");
+    }
 }

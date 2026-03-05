@@ -41,6 +41,60 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "HighAtk",
+                    "type": "Button",
+                    "id": "1d716073-e5ca-428c-ab58-4215ea0e3bbe",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MiddleAtk",
+                    "type": "Button",
+                    "id": "22fcdac3-c60d-4028-8320-70ed5b1c0a02",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LowAtk",
+                    "type": "Button",
+                    "id": "b160dce5-1421-49a6-83b4-51713bb16860",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HighDef",
+                    "type": "Button",
+                    "id": "eb6619cf-ad8e-4a99-be53-5b07b424e8e2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MiddleDef",
+                    "type": "Button",
+                    "id": "5cabf4bb-cca2-4900-9157-9bae3fd7304f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LowDef",
+                    "type": "Button",
+                    "id": "545aea65-62dc-49e5-9e94-0a34e122abaf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -85,6 +139,72 @@
                     "processors": "",
                     "groups": ";keymouse",
                     "action": "RPSEnter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cb0bb40-9f36-468b-b7ba-465819516fbc",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HighAtk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "412afd1e-d1a8-4de7-9c3d-651e77924c0d",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MiddleAtk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4496fabe-687a-4153-a486-da4b308fd97f",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LowAtk",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c6d7492c-9da8-441e-9f61-a43d85cdb494",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HighDef",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83b4ca4d-c060-48aa-acab-7bfd7bb6f9a3",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MiddleDef",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b202fdb-7ad7-42dd-89ad-8eccbbfff4ac",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LowDef",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

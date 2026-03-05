@@ -7,7 +7,7 @@ public class RockPaperScissors : MonoBehaviour
     { 
         battleSystem = GetComponent<BattleSystem>();
     }
-    bool isGameActive = false;
+    public bool isGameActive = false;
     enum Hand
     { 
         None, //0 
@@ -22,7 +22,10 @@ public class RockPaperScissors : MonoBehaviour
     public void PressEnter(InputAction.CallbackContext context)
     {
         if (!context.performed) return;// context.performed가 false면 함수 종료, 버튼이 정확히 눌렸을 때 한 번만 실행되도록 하는 역할
-        isGameActive = true;// 게임이 활성화 됐다는 것을 나타내는 변수 isGameActive를 true로 설정
+        if (isGameActive == false)
+        {
+            isGameActive = true;// 게임이 활성화 됐다는 것을 나타내는 변수 isGameActive를 true로 설정
+        }
         Debug.Log("가위바위보 게임 시작!");
     }
 
@@ -61,7 +64,7 @@ public class RockPaperScissors : MonoBehaviour
 
         Debug.Log(result); // result를 로그로 출력
 
-        isGameActive = false; // 게임이 끝났다는 것을 나타내는 변수 isGameActive를 false로 설정
+        //isGameActive = false; 게임이 끝났다는 것을 나타내는 변수 isGameActive를 false로 설정
 
         battleSystem.StartBattlePhase(result); // battleSystem의 StartBattlePhase 함수를 호출하면서 result를 인자로 넘겨서 배틀 시스템에서 결과에 따른 행동을 처리하도록 함
     }

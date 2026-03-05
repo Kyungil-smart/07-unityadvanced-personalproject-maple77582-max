@@ -10,16 +10,16 @@ public class MoveController : MonoBehaviour
 
     public void PlayerAttackSuccess()
     {
-        player.position += new Vector3(0, 0, 2f);
-        ai.position -= new Vector3(0, 0, 2f);
+        player.position += new Vector3(0, 0, 6f);
+        ai.position += new Vector3(0, 0, 6f);
 
         CheckGoal();
     }
 
     public void AIAttackSuccess()
     {
-        player.position -= new Vector3(0, 0, 2f);
-        ai.position += new Vector3(0, 0, 2f);
+        player.position -= new Vector3(0, 0, 6f);
+        ai.position -= new Vector3(0, 0, 6f);
 
         CheckGoal();
     }
@@ -30,18 +30,18 @@ public class MoveController : MonoBehaviour
         float aiGoalDistance = Vector3.Distance(ai.position, aiGoal.position); //Ai의 골까지의 거리
 
         Debug.Log($"Player의 승리까지 Player가 가야 하는 거리 : {playerGoalDistance}");
-        Debug.Log($"AI의 패배까지 AI가 가야 하는 거리 : {aiGoalDistance}");
+        Debug.Log($"AI의 승리까지 AI가 가야 하는 거리 : {aiGoalDistance}");
 
         if (playerGoalDistance <= 0.1f)
         {
             Debug.Log("Player Win!");
-            SceneManager.LoadScene("Title");
+            SceneManager.LoadScene("PlayerWin");
         }
 
         if(aiGoalDistance <= 0.1f)
         {
             Debug.Log("AI Win...");
-            SceneManager.LoadScene("Title");
+            SceneManager.LoadScene("AiWin");
         }
     }
 }

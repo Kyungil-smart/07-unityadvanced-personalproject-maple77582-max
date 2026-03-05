@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TetoCats.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 02bd8d82e261c7648ad8905758259e85
+  - enabled: 1
+    path: Assets/Scenes/AiWin.unity
+    guid: a4bdaf896853c684c9a75b4bfedf97a4
+  - enabled: 1
+    path: Assets/Scenes/PlayerWin.unity
+    guid: bfa2bfc8452710645830b9ee66f7efc5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
