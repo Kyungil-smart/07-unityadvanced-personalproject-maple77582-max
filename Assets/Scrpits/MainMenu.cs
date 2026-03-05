@@ -3,21 +3,6 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 public class MainMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public RectTransform transitionImage;   // RawImage의 RectTransform
-    public float duration = 2f;             // 이동 시간
-
     public void OnClickNewGame()
     {
         Debug.Log("새 게임");

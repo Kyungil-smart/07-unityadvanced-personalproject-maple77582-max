@@ -227,11 +227,56 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f0856fb3-7f42-4492-a384-eef5b94e9773
     m_ActionName: 'RPSGame/Paper[/Keyboard/3]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 54359124}
+        m_TargetAssemblyTypeName: RockPaperScissors, Assembly-CSharp
+        m_MethodName: PressEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 65620b8a-daf8-4bf1-b48e-a2ea49da9559
+    m_ActionName: 'RPSGame/RPSEnter[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: keymouse
   m_DefaultActionMap: RPSGame
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &54359128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54359120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc783003ecc22d647a5dd4891aeb149f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BattleSystem
+  moveController: {fileID: 54359129}
+--- !u!114 &54359129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54359120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e757ce50bbc0346875a23fd76274e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveController
+  player: {fileID: 54359122}
+  ai: {fileID: 941204913}
+  playerGoal: {fileID: 858671666}
+  aiGoal: {fileID: 1344627404}
 --- !u!1001 &130233168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,7 +429,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2098553, y: -0.0000000051382822, z: 0.0000000011028537, w: 0.9777325}
-  m_LocalPosition: {x: 0, y: 3.5049999, z: -5.7}
+  m_LocalPosition: {x: 0, y: 3.485, z: -6.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -491,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 344772685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02, z: 2}
+  m_LocalPosition: {x: 0, y: 0.02, z: 1.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -698,7 +743,7 @@ Transform:
   m_GameObject: {fileID: 858671665}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.71096, y: 0.02, z: 7.59906}
+  m_LocalPosition: {x: 0, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -722,6 +767,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIAniController
   anim: {fileID: 0}
+--- !u!4 &941204913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7596118299041257294, guid: 1c88ca6f20c52b646876f3b3aa40bb64, type: 3}
+  m_PrefabInstance: {fileID: 130233168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1094667858
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +910,7 @@ Transform:
   m_GameObject: {fileID: 1201476569}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.71096, y: -0, z: -1.59906}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -898,7 +948,7 @@ Transform:
   m_GameObject: {fileID: 1269581438}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2098553, y: -0.0000000051382822, z: 0.0000000011028538, w: 0.9777325}
-  m_LocalPosition: {x: 0, y: 3.485, z: -5.7}
+  m_LocalPosition: {x: 0, y: 3.485, z: -6.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1133,7 +1183,7 @@ Transform:
   m_GameObject: {fileID: 1344627403}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.71096, y: 0.02, z: -2.40094}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1153,7 +1203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 173487713374182305, guid: b378c8c7799eba342a7c00e83058151c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 173487713374182305, guid: b378c8c7799eba342a7c00e83058151c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1214,6 +1264,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 658522301777592603, guid: b378c8c7799eba342a7c00e83058151c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 54359126}
+    - targetCorrespondingSourceObject: {fileID: 658522301777592603, guid: b378c8c7799eba342a7c00e83058151c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 54359128}
+    - targetCorrespondingSourceObject: {fileID: 658522301777592603, guid: b378c8c7799eba342a7c00e83058151c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 54359129}
   m_SourcePrefab: {fileID: 100100000, guid: b378c8c7799eba342a7c00e83058151c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

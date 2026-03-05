@@ -1,0 +1,47 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+public class MoveController : MonoBehaviour
+{
+    public Transform player;
+    public Transform ai;
+
+    public Transform playerGoal;
+    public Transform aiGoal;
+
+    public void PlayerAttackSuccess()
+    {
+        player.position += new Vector3(0, 0, 2f);
+        ai.position -= new Vector3(0, 0, 2f);
+
+        CheckGoal();
+    }
+
+    public void AIAttackSuccess()
+    {
+        player.position -= new Vector3(0, 0, 2f);
+        ai.position += new Vector3(0, 0, 2f);
+
+        CheckGoal();
+    }
+
+    void CheckGoal()
+    {
+        float playerGoalDistance = Vector3.Distance(player.position, playerGoal.position); //플레이어의 골까지의 거리
+        float aiGoalDistance = Vector3.Distance(ai.position, aiGoal.position); //Ai의 골까지의 거리
+
+        Debug.Log($"Player의 승리까지 Player가 가야 하는 거리 : {playerGoalDistance}");
+        Debug.Log($"AI의 패배까지 AI가 가야 하는 거리 : {aiGoalDistance}");
+
+        if (playerGoalDistance <= 0.1f)
+        {
+            Debug.Log("Player Win!");
+            SceneManager.LoadScene("Title");
+        }
+
+        if(aiGoalDistance <= 0.1f)
+        {
+            Debug.Log("AI Win...");
+            SceneManager.LoadScene("Title");
+        }
+    }
+}

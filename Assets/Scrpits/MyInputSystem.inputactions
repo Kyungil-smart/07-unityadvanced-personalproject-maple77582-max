@@ -32,6 +32,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "RPSEnter",
+                    "type": "Button",
+                    "id": "65620b8a-daf8-4bf1-b48e-a2ea49da9559",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -65,6 +74,17 @@
                     "processors": "",
                     "groups": ";keymouse",
                     "action": "Paper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a54aa76-007d-4a09-9d7c-6926ff173077",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";keymouse",
+                    "action": "RPSEnter",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
