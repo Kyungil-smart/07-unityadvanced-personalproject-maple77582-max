@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,35 +28,34 @@ public class RockPaperScissors : MonoBehaviour
         {
             isGameActive = true;// 게임이 활성화 됐다는 것을 나타내는 변수 isGameActive를 true로 설정
         }
-        Debug.Log("가위바위보 게임 시작!");
+        //Debug.Log("가위바위보 게임 시작!");
+        Debug.Log("Start RPS Game!");
     }
 
     public void Press1(InputAction.CallbackContext context)
     {
         if(!context.performed)   return;
         if(!isGameActive) return;
-        Debug.Log("가위!");
+        Debug.Log("Scissors!");
         Play(Hand.Scissors);
     }
     public void Press2(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
         if (!isGameActive) return;
-        Debug.Log("바위!");
+        Debug.Log("Rock!");
         Play(Hand.Rock);
     }
     public void Press3(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
         if (!isGameActive) return;
-        Debug.Log("보!");
+        Debug.Log("Paper!");
         Play(Hand.Paper);
     }
 
     private void Play(Hand player)
     {
-        //if (playerHand != Hand.None) return;
-
         playerHand = player;
         Hand aiHand = (Hand)Random.Range(1, 4); // ai는 Hand 열거형에서 Random.Range로 1이상 4미만의 숫자를 랜덤으로 뽑아서 aiHand 변수에 저장
 

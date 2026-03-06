@@ -11,7 +11,8 @@ public class MainMenu : MonoBehaviour
 
     public void OnClickSetting()
     {
-        Debug.Log("설정");
+        Debug.Log("HowToPlay");
+        SceneManager.LoadScene("HowToPlay");
     }
 
     public void OnCLickQuitGame()

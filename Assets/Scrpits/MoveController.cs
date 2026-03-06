@@ -29,8 +29,8 @@ public class MoveController : MonoBehaviour
         float playerGoalDistance = Vector3.Distance(player.position, playerGoal.position); //플레이어의 골까지의 거리
         float aiGoalDistance = Vector3.Distance(ai.position, aiGoal.position); //Ai의 골까지의 거리
 
-        Debug.Log($"Player의 승리까지 Player가 가야 하는 거리 : {playerGoalDistance}");
-        Debug.Log($"AI의 승리까지 AI가 가야 하는 거리 : {aiGoalDistance}");
+        Debug.Log($"Player goal distance : {playerGoalDistance}");
+        Debug.Log($"AI goal distance : {aiGoalDistance}");
 
         if (playerGoalDistance <= 0.1f)
         {
